@@ -1,0 +1,28 @@
+<!doctype html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+      <script src="node_modules/xterm/lib/xterm.js"></script>
+    </head>
+    <body>
+      <div id="terminal"></div>
+      <script>
+        var term = new Terminal();
+        term.open(document.getElementById('terminal'));
+        term.write(`Hello from \x1B[34mcolorshelll\x1B[0m Demo
+        \r\x1B[31m■ Red Foreground
+        \r\x1B[32m■ Green Foreground
+        \r\x1B[33m■ Yellow Foreground
+        \r\x1B[34m■ Blue Foreground
+        \r\x1B[35m■ Magenta Foreground
+        \r\x1B[36m■ Cyan Foreground
+        \r\x1B[37m■ White Foreground
+        \r\x1B[30m■ Black Foreground
+        \r\x1B[0m`)
+        term.prompt = () => {
+            term.write("\r$ ");
+        };
+        term.prompt();
+      </script>
+    </body>
+  </html>
