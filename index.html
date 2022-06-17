@@ -1,28 +1,52 @@
 <!doctype html>
   <html>
     <head>
-      <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
-      <script src="node_modules/xterm/lib/xterm.js"></script>
+      <script src="https://cdn.tailwindcss.com/"></script>
     </head>
     <body>
-      <div id="terminal"></div>
-      <script>
-        var term = new Terminal();
-        term.open(document.getElementById('terminal'));
-        term.write(`Hello from \x1B[34mcolorshelll\x1B[0m Demo
-        \r\x1B[31m■ Red Foreground
-        \r\x1B[32m■ Green Foreground
-        \r\x1B[33m■ Yellow Foreground
-        \r\x1B[34m■ Blue Foreground
-        \r\x1B[35m■ Magenta Foreground
-        \r\x1B[36m■ Cyan Foreground
-        \r\x1B[37m■ White Foreground
-        \r\x1B[30m■ Black Foreground
-        \r\x1B[0m`)
-        term.prompt = () => {
-            term.write("\r$ ");
-        };
-        term.prompt();
-      </script>
+      <div id="terminal">
+        <div class="content mt-8 w-full max-w-xl self-center overflow-hidden rounded bg-slate-900 shadow-md dark:bg-black">
+          <div class="relative flex h-8 items-center justify-between shadow-sm">
+            <div class="ml-4 flex items-center space-x-2">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+              <span class="h-3 w-3 rounded-full bg-green-400"></span>
+            </div>
+            <div class="pointer-events-none absolute inset-0 flex items-center justify-center text-sm font-mono text-gray-500">Terminal</div>
+          </div>
+          <div class="px-4 py-3 font-mono">
+            <span class="select-none text-gray-500">▲ ~ node colorshelll.js</span>
+            <br />
+            <span class="select-none text-gray-500">> colorshelll-node --start</span>
+            <br />
+            <br />
+            <span class="select-none text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500">Basic Colors</span>
+            <br />
+            <span class="select-none" style="color: red;">■ Red Foreground</span>
+            <br />
+            <span class="select-none" style="color: green;">■ Green Foreground</span>
+            <br />
+            <span class="select-none" style="color: yellow;">■ Yellow Foreground</span>
+            <br />
+            <span class="select-none" style="color: blue;">■ Blue Foreground</span>
+            <br />
+            <span class="select-none" style="color: magenta;">■ Magenta Foreground</span>
+            <br />
+            <span class="select-none" style="color: cyan;">■ Cyan Foreground</span>
+            <br />
+            <span class="select-none" style="color: white;">■ White Foreground</span>
+            <br />
+            <span class="select-none" style="color: black;">■ Black Foreground</span>
+            <br />
+            <br />
+            <span class="select-none text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500">Gradients</span>
+            <br />
+            <span class="select-none text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500">▬▬▬▬▬▬Turbo▬▬▬▬▬▬</span>
+            <br />
+            <span class="select-none text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">▬▬▬▬▬▬Ocean▬▬▬▬▬▬</span>
+            <input type="text" name="command-string" id="command-string" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="autofill:shadow-fill-white dark:autofill:shadow-fill-black flex-grow border-none bg-slate-900 outline-none focus:outline-none focus:ring-0 text-white" aria-label="Command" value="" />
+          </div>
+        </div>
+      </div>
     </body>
   </html>
