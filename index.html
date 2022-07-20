@@ -16,6 +16,7 @@
       <style>
           @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
       </style>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"/>
     </head>
     <body>
 	 <header class="header mb-6" style="background-color: #E1F5FE; opacity: 0.5; width: 100%; position: fixed;">
@@ -28,6 +29,9 @@
 	      <a class="text-gray no-underline py-3 mr-3" href="https://colorshelll-docs.vercel.app">Docs</a>
 	      <a class="text-gray no-underline py-3 mr-3" href="https://github.com/turbocolor/colorshelll">GitHub</a>
 	    </nav>
+            <nav>
+		<div id="docsearch"></div>
+            </nav>
 	  </div>
 	</header>
       <br />
@@ -151,5 +155,15 @@
   <div class="cover"></div>
 <path class="panda_icon panda_white" d="M86.6,20.4v15.3h5.1v20.4h-5.1v5.1h-5.1v5H71.3v5.1H20.4v-5.1H10.2v-5H5.1v-5.1H0V35.7h5.1V20.4L25.5,5.1h40.7
 	L86.6,20.4z"/>
+	  script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script type="text/javascript">
+docsearch({
+appId: QX694H4ROS,
+apiKey: 5aee39998bf467edcf65124171e3074c,
+indexName: colorshelll,
+container: '#docsearch'
+debug: false
+});
+</script>
     </body>
   </html>
